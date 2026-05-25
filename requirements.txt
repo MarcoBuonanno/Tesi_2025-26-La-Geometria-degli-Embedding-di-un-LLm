@@ -1,1 +1,16 @@
+sentence-transformers
+transformers
+torch
 
+numpy
+pandas
+scipy
+
+scikit-learn
+umap-learn
+
+matplotlib
+seaborn
+plotly
+
+nltk
