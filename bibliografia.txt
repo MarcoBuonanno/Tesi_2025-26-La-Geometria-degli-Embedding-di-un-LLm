@@ -1,0 +1,49 @@
+@article{hill2015simlex,
+  title={Simlex-999: Evaluating semantic models with (genuine) similarity estimation},
+  author={Hill, Felix and Reichart, Roi and Korhonen, Anna},
+  journal={Computational Linguistics},
+  volume={41},
+  number={4},
+  pages={665--695},
+  year={2015}
+} #guida metodologica a come formare dataset di coppie di parole prendendo spunto da Simlex, soprattutto riconoscendo la differenza tra similarità (sinonimi) e analogia (utile per 4.1 e 4.3 ) per 4.1 utile anche per criteri su come organizzare i dataset  ( coppie di  parole, concreti-astratti )
+
+
+@article{lee2020combining,
+  title={Combining and learning word embedding with WordNet for semantic relatedness and similarity measurement},
+  author={Lee, Yang-Yin and Ke, Hao and Yen, Ting-Yu and Huang, Hen-Hsen and Chen, Hsin-Hsi},
+  journal={Journal of the association for information science and technology},
+  volume={71},
+  number={6},
+  pages={657--670},
+  year={2020},
+  publisher={Wiley Online Library}
+} #si può usare per giustificare l'uso di WordNet per la costruzione del dataset, qua lo usano come ground truth lessicale per migliorare la relatedness in modelli di embedding
+
+@inproceedings{mrkvsic2016counter,
+  title={Counter-fitting word vectors to linguistic constraints},
+  author={Mrk{\v{s}}i{\'c}, Nikola and S{\'e}aghdha, Diarmuid O and Thomson, Blaise and Gasic, Milica and Barahona, Lina M Rojas and Su, Pei-Hao and Vandyke, David and Wen, Tsung-Hsien and Young, Steve},
+  booktitle={Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages={142--148},
+  year={2016}
+} #plasmano lo spazio dimensionale degli embedding perchè gli static models non riescono a discernere sinonimi e contrari
+
+@article{orkphol2019word,
+  title={Word sense disambiguation using cosine similarity collaborates with Word2vec and WordNet},
+  author={Orkphol, Korawit and Yang, Wu},
+  journal={Future Internet},
+  volume={11},
+  number={5},
+  pages={114},
+  year={2019},
+  publisher={MDPI}  
+}#può essere utile perchè parla di polisemia nei vocaboli, lo posso usare per giustificare perchè mi limito al primo significato in WordNet
+
+@inproceedings{mikolov2013linguistic,
+  title={Linguistic regularities in continuous space word representations},
+  author={Mikolov, Tom{\'a}{\v{s}} and Yih, Wen-tau and Zweig, Geoffrey},
+  booktitle={Proceedings of the 2013 conference of the north american chapter of the association for computational linguistics: Human language technologies},
+  pages={746--751},
+  year={2013}
+} #utilissimo, giustifica cosine similarity, fa quello che facciamo noi per static models, dimostra che analogie semantiche classiche possono funzionare per modelli statici
+
