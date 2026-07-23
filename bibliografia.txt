@@ -47,3 +47,31 @@
   year={2013}
 } #utilissimo, giustifica cosine similarity, fa quello che facciamo noi per static models, dimostra che analogie semantiche classiche possono funzionare per modelli statici
 
+#metodologia creazione dataset sinonimi, contrari, random:
+#Estrazione di parole tramite WordNet: filtrate per POS, parole con solo lettere all'interno, con più di 3 lettere e con un significati abbastanza comune
+#IMPORTANTE: a fini pratici si sono utilizzati solo aggettivi, perchè possono più spesso indicare una caratteristica qualitativa e quindi sono più facili da associare a sinonimi e contrari
+#IMPORTANTE: per il filtro sulla sequenza si è utilizzata la libreria wordfreq: "https://pypi.org/project/wordfreq/", in particolare "zipf_frequency" che pone la frequenza su una scala da 1 (poco comune) a 8 (molto comune), si è deciso di filtrare per 2.5 per avere un'ampia selezione di aggettivi
+#Sinonimi:Primo filtraggio attraverso una funzione: si controlla che la parola estratta e il sinonimo associato siano reciprocamente nel synset[0] dell'altro, così è ridotta la presenza di termini polisemici (entrambi sono associati al significato principale attribuito da WordNet),
+                                                    #sempre per evitare polisemia si scartano parole con più di 5 significati associati
+                                                    #si mantengono i filtri usati per l'estrazione delle parole
+                                                    #si controlla che il sinonimo associato non sia la parola originale
+          #vengono estratti gli aggettivi, vengono riordinati e si prende un campione di 500 parole
+          #si sono rimosse parole troppo simili tra loro: se condividono il 75% delle lettere si eliminano
+          #si filtrano manualmente le parole rimaste secondo i seguenti criteri: scartare sinonimie deboli
+                                                                                 #scartare termini offensivi
+                                                                                 #scartare termini dialettali o slang
+                                                                                 #scartare numeri
+                                                                                 #scartare parole fortemente polisemiche rimaste
+#Contrari: primo filtraggio attraverso una funzione: i filtri sono i medesimi della funzione dei sinonimi
+          #si eilimina una delle eventuali coppie duplicate jelous-envious e envious-jelous (situazione che non è capitata per i sinonimi poichè vi erano molte più parole tra cui scegliere k'associazione)
+          #si filtra manualmente seguendo i criteri usati per la sinonimia, con la differenza che in questo caso si scartano le antinomie deboli
+          #un filtro aggiuntivo è quello di eliminare alcune forme di relazione antinomiale troppo comuni (es. parole con suffisso -un o -im) di modo da avere un dataset più variegato
+          #si preleva un campione di coppie uguale a quanto uscito per i sinonimi (111) di modo da bilanciare l'esperimento
+
+#Random: dagli aggettivi estratti da WordNet si selezionano 150 (numero superiore a 111 per poter applicare un filtro manuale) coppie di parole
+         #queste coppie non devono però essere uguali a quelle ottenute dopo la prima funzione di estrazione di sinonimi e contrari (si eliminano quelle estratte alla prima funzione così da evitare legami semantici anche solo alla lontana)
+         #si evita anche che vi siano coppie "duplicati" 
+         #si effettua un controllo manuale per eliminare: numeri, termini offensivi, slang o espressioni dialettali
+         #si eliminano anche alcuni vocaboli legati alla nazionalità poichè preponderanti nel dataset, di modo da offrire più varietà
+         #si estraggono 111 coppie dalla lista appena filtrata così da bilanciare l'esperimento                                                                            
+           
