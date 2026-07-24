@@ -1,3 +1,14 @@
+#questo forse utile per esperimento sulle analogie
+@article{korchinski2026emergence,
+  title={On the emergence of linear analogies in word embeddings},
+  author={Korchinski, Daniel and Karkada, Dhruva and Bahri, Yasaman and Wyart, Matthieu},
+  journal={Advances in neural information processing systems},
+  volume={38},
+  pages={62069--62097},
+  year={2026}
+}
+
+
 @article{hill2015simlex,
   title={Simlex-999: Evaluating semantic models with (genuine) similarity estimation},
   author={Hill, Felix and Reichart, Roi and Korhonen, Anna},
@@ -8,6 +19,14 @@
   year={2015}
 } #guida metodologica a come formare dataset di coppie di parole prendendo spunto da Simlex, soprattutto riconoscendo la differenza tra similarità (sinonimi) e analogia (utile per 4.1 e 4.3 ) per 4.1 utile anche per criteri su come organizzare i dataset  ( coppie di  parole, concreti-astratti )
 
+
+@inproceedings{gladkova2016intrinsic,
+  title={Intrinsic evaluations of word embeddings: What can we do better?},
+  author={Gladkova, Anna and Drozd, Aleksandr},
+  booktitle={Proceedings of the 1st Workshop on Evaluating Vector-Space Representations for NLP},
+  pages={36--42},
+  year={2016}
+} #paragrafo 3 sulla polisemia
 
 @article{lee2020combining,
   title={Combining and learning word embedding with WordNet for semantic relatedness and similarity measurement},
@@ -73,5 +92,46 @@
          #si evita anche che vi siano coppie "duplicati" 
          #si effettua un controllo manuale per eliminare: numeri, termini offensivi, slang o espressioni dialettali
          #si eliminano anche alcuni vocaboli legati alla nazionalità poichè preponderanti nel dataset, di modo da offrire più varietà
-         #si estraggono 111 coppie dalla lista appena filtrata così da bilanciare l'esperimento                                                                            
+         #si estraggono 111 coppie dalla lista appena filtrata così da bilanciare l'esperimento.
+
+
+
+scelta del modello:
+@article{reimers2019sentence,
+  title={Sentence-bert: Sentence embeddings using siamese bert-networks},
+  author={Reimers, N},
+  journal={arXiv preprint arXiv:1908.10084},
+  year={2019}
+} #miglioramento di prestazioni grazie ai modelli sentence bert
+
+@article{wang2020minilm,
+  title={Minilm: Deep self-attention distillation for task-agnostic compression of pre-trained transformers},
+  author={Wang, Wenhui and Wei, Furu and Dong, Li and Bao, Hangbo and Yang, Nan and Zhou, Ming},
+  journal={Advances in neural information processing systems},
+  volume={33},
+  pages={5776--5788},
+  year={2020}
+} #specifici modelli sentence bert con dimensionalitàm ridotta
+
+sul modello utilizzato: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2?utm_source=chatgpt.com
+
+Rappresentazione cosine similarity:
+@inproceedings{etcheverry2019unraveling,
+  title={Unraveling antonym’s word vectors through a siamese-like network},
+  author={Etcheverry, Mathias and Wonsever, Dina},
+  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  pages={3297--3307},
+  year={2019}
+} #Table 3
+
+
+ @inproceedings{nguyen2016integrating,
+  title={Integrating distributional lexical contrast into word embeddings for antonym-synonym distinction},
+  author={Nguyen, Kim-Anh and Im Walde, Sabine Schulte and Vu, Ngoc Thang},
+  booktitle={Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},
+  pages={454--459},
+  year={2016}
+} #boxplot cosine similarity sinonimi-contrari
+
+
            
