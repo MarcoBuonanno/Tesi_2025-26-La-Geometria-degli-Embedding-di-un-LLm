@@ -134,4 +134,44 @@ Rappresentazione cosine similarity:
 } #boxplot cosine similarity sinonimi-contrari
 
 
+@article{shapiro1965analysis,
+  title={An analysis of variance test for normality (complete samples)},
+  author={Shapiro, Samuel Sanford and Wilk, Martin B},
+  journal={Biometrika},
+  volume={52},
+  number={3-4},
+  pages={591--611},
+  year={1965},
+  publisher={Oxford University Press}
+} #test shapiro-Wilk per la verifica della normalità di distribuzioni in piccoli campioni
+
+@article{gastwirth2009impact,
+  title={The impact of Levene’s test of equality of variances on statistical theory and practice},
+  author={Gastwirth, Joseph L and Gel, Yulia R and Miao, Weiwen},
+  year={2009}
+} #spiega accuratamente il Lavene test, fonte molto citata
+
+
+@article{debray2025mapping,
+  title={Mapping and modeling the semantic space of math concepts},
+  author={Debray, Samuel and Dehaene, Stanislas},
+  journal={Cognition},
+  volume={254},
+  pages={105971},
+  year={2025},
+  publisher={Elsevier}
+} #a pagina 5 si cita il test Kruskall-wallis
+
+
+
+@article{kruskal1952use,
+  title={Use of ranks in one-criterion variance analysis},
+  author={Kruskal, William H and Wallis, W Allen},
+  journal={Journal of the American statistical Association},
+  volume={47},
+  number={260},
+  pages={583--621},
+  year={1952},
+  publisher={Taylor \& Francis}
+} il test di Kruskall-Wallis
            
