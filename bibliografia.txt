@@ -9,15 +9,6 @@
 }
 
 
-@article{hill2015simlex,
-  title={Simlex-999: Evaluating semantic models with (genuine) similarity estimation},
-  author={Hill, Felix and Reichart, Roi and Korhonen, Anna},
-  journal={Computational Linguistics},
-  volume={41},
-  number={4},
-  pages={665--695},
-  year={2015}
-} #guida metodologica a come formare dataset di coppie di parole prendendo spunto da Simlex, soprattutto riconoscendo la differenza tra similarità (sinonimi) e analogia (utile per 4.1 e 4.3 ) per 4.1 utile anche per criteri su come organizzare i dataset  ( coppie di  parole, concreti-astratti )
 
 
 @inproceedings{gladkova2016intrinsic,
@@ -203,3 +194,58 @@ Forse la nota principale però è che il modello non riconosce le parole contrar
 
 
                                         
+
+                                        
+                                        
+ESERCIZIO 2
+
+@inproceedings{min2021locality,
+  title={Locality preserving sentence encoding},
+  author={Min, Changrong and Chu, Yonghe and Yang, Liang and Xu, Bo and Lin, Hongfei},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2021},
+  pages={3050--3060},
+  year={2021}
+} #mette in discussione la cosine similarity come misura per calcolare similarità di embedding
+
+
+@inproceedings{tu2013wordnet,
+  title={WordNet based multi-way concept hierarchy construction from text corpus},
+  author={Tu, Ding and Chen, Ling and Chen, Gencai},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={27},
+  number={1},
+  pages={1647--1648},
+  year={2013}
+} #può essere utile per la clusterizzazione gerarchica?
+
+
+
+@inproceedings{alsuhaibani2018joint,
+  title={Joint learning of hierarchical word embeddings from a corpus and a taxonomy},
+  author={Alsuhaibani, Mohammed and Maehara, Takanori and Bollegala, Danushka},
+  booktitle={Automated Knowledge Base Construction (AKBC)},
+  year={2018}
+} #La capacità degli embedding di rappresentare relazioni gerarchiche è stata studiata in letteratura, evidenziando come i comuni word embedding 
+possano codificare informazioni relative all'iperonimia, pur non rappresentando necessariamente in modo esplicito la struttura gerarchica [X]. 
+Il contrario di quello che faccio, da verificare affidabilità di Papers. Il lavoro di Alsuhaibani et al. parla esplicitamente di relazioni gerarchiche dirette e indirette. Ad esempio considerano percorsi del tipo:
+
+macrophage → phagocyte → somatic_cell → cell → living_thing
+
+e distinguono le relazioni tra nodi adiacenti da quelle tra nodi separati da più livelli.
+
+Questa cosa è quasi esattamente ciò che ti serve per progettare il tuo esperimento.
+
+
+@article{yang2022lexical,
+  title={Lexical semantics enhanced neural word embeddings},
+  author={Yang, Dongqiang and Li, Ning and Zou, Li and Ma, Hongwei},
+  journal={Knowledge-Based Systems},
+  volume={252},
+  pages={109298},
+  year={2022},
+  publisher={Elsevier}
+} #WordNet ground Truth anche per quanto riguarda gerarchizzazione degli embedding
+
+
+
+
