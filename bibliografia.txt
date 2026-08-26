@@ -247,5 +247,45 @@ Questa cosa è quasi esattamente ciò che ti serve per progettare il tuo esperim
 } #WordNet ground Truth anche per quanto riguarda gerarchizzazione degli embedding
 
 
+ALTRI PAPER PER ES 2
+
+@article{liu2012concept,
+  title={Concept vector for semantic similarity and relatedness based on WordNet structure},
+  author={Liu, Hongzhe and Bao, Hong and Xu, De},
+  journal={Journal of Systems and software},
+  volume={85},
+  number={2},
+  pages={370--381},
+  year={2012},
+  publisher={Elsevier}
+} #ground truth per usare WordNet e le sue relazioni di iponomi per esperimento con albero tassonomico (usano pure cosine similarity)
+WordNet fornisce una struttura tassonomica nella quale la distanza tra concetti può essere utilizzata come informazione sulla loro similarità semantica; tale informazione può poi essere confrontata con una rappresentazione vettoriale.
+
+
+@article{zhang2025neural,
+  title={Neural semantic parsing with extremely rich symbolic meaning representations},
+  author={Zhang, Xiao and Bouma, Gosse and Bos, Johan},
+  journal={Computational Linguistics},
+  volume={51},
+  number={1},
+  pages={235--274},
+  year={2025},
+  publisher={MIT Press 255 Main Street, 9th Floor, Cambridge, Massachusetts 02142, USA~…}
+} #concettualmente vicini al mio esperimento: prendono una gerarchia costruita con WordNet;
+hanno concetti a diversi livelli della gerarchia;
+estraggono gli embedding dei concetti;
+calcolano la cosine distance tra gli embedding;
+verificano se le distanze rispettano l'ordine previsto dalla gerarchia di WordNet.
+
+@inproceedings{park2025geometry,
+  title={The geometry of categorical and hierarchical concepts in large language models},
+  author={Park, Kiho and Choe, Yo Joong and Jiang, Yibo and Veitch, Victor},
+  booktitle={International Conference on Learning Representations},
+  volume={2025},
+  pages={76441--76463},
+  year={2025}
+}#IMPORTANTISSIMO è un esperimento che fa quasi la stessa cosa che faccio
+FIgure 4 e soprattutto FIgure 9 sono fondamentali: heatmap di shortest_distance e cosine similarity a confronto
+
 
 
