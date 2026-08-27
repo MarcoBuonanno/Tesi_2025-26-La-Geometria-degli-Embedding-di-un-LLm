@@ -259,7 +259,8 @@ ALTRI PAPER PER ES 2
   year={2012},
   publisher={Elsevier}
 } #ground truth per usare WordNet e le sue relazioni di iponomi per esperimento con albero tassonomico (usano pure cosine similarity)
-WordNet fornisce una struttura tassonomica nella quale la distanza tra concetti può essere utilizzata come informazione sulla loro similarità semantica; tale informazione può poi essere confrontata con una rappresentazione vettoriale.
+WordNet fornisce una struttura tassonomica nella quale la distanza tra concetti può essere utilizzata come informazione sulla loro similarità semantica; 
+tale informazione può poi essere confrontata con una rappresentazione vettoriale.
 
 
 @article{zhang2025neural,
@@ -287,5 +288,20 @@ verificano se le distanze rispettano l'ordine previsto dalla gerarchia di WordNe
 }#IMPORTANTISSIMO è un esperimento che fa quasi la stessa cosa che faccio
 FIgure 4 e soprattutto FIgure 9 sono fondamentali: heatmap di shortest_distance e cosine similarity a confronto
 
+@inproceedings{zhai2016intrinsic,
+  title={Intrinsic and Extrinsic Evaluations of Word Embeddings.},
+  author={Zhai, Michael and Tan, Johnny and Choi, Jinho D}
+}
+#fanno clustering di embedding con k-means e lo confrontano con una struttura semantica predefinita di WordNet, esattamente quello che faccio
 
+
+@inproceedings{poostchi2018cluster,
+  title={Cluster Labeling by Word Embeddings and WordNet's Hypernymy},
+  author={Poostchi, Hanieh and Piccardi, Massimo},
+  booktitle={Proceedings of the Australasian Language Technology Association Workshop 2018},
+  pages={66--70},
+  year={2018}
+}#prendono embedding di parole, fanno clusterizzazione e usano iperonimi di WordNet per assegnare nomi ai cluster, 
+in un certo senso stanno confrontando cluster con legami semantici di WordNet
+#da capire se va bene come citazione
 
