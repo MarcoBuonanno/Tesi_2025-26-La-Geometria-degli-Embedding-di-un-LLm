@@ -227,7 +227,8 @@ ESERCIZIO 2
   year={2018}
 } #La capacità degli embedding di rappresentare relazioni gerarchiche è stata studiata in letteratura, evidenziando come i comuni word embedding 
 possano codificare informazioni relative all'iperonimia, pur non rappresentando necessariamente in modo esplicito la struttura gerarchica [X]. 
-Il contrario di quello che faccio, da verificare affidabilità di Papers. Il lavoro di Alsuhaibani et al. parla esplicitamente di relazioni gerarchiche dirette e indirette. Ad esempio considerano percorsi del tipo:
+Il contrario di quello che faccio, da verificare affidabilità di Papers. Il lavoro di Alsuhaibani et al. parla esplicitamente di relazioni gerarchiche dirette 
+e indirette. Ad esempio considerano percorsi del tipo:
 
 macrophage → phagocyte → somatic_cell → cell → living_thing
 
@@ -304,4 +305,33 @@ FIgure 4 e soprattutto FIgure 9 sono fondamentali: heatmap di shortest_distance 
 }#prendono embedding di parole, fanno clusterizzazione e usano iperonimi di WordNet per assegnare nomi ai cluster, 
 in un certo senso stanno confrontando cluster con legami semantici di WordNet
 #da capire se va bene come citazione
+
+
+
+ESERCIZIO 3
+
+@inproceedings{gladkova2016analogy,
+  title={Analogy-based detection of morphological and semantic relations with word embeddings: what works and what doesn’t.},
+  author={Gladkova, Anna and Drozd, Aleksandr and Matsuoka, Satoshi},
+  booktitle={Proceedings of the NAACL Student Research Workshop},
+  pages={8--15},
+  year={2016}
+}#Utilissimo: anzitutto scegli qua le analogie classiche da testare e poi fornisce pure dataset da usare come esempio di analogie classiche.
+a seconda del tipo di analogia si avrà un'accuracy diversa.
+
+
+@article{torii2024distributional,
+  title={Distributional hypothesis as isomorphism between word-word co-occurrence and analogical parallelograms},
+  author={Torii, Takuma and Maeda, Akihiro and Hidaka, Shohei},
+  journal={PloS one},
+  volume={19},
+  number={10},
+  pages={e0312151},
+  year={2024},
+  publisher={Public Library of Science San Francisco, CA USA}
+}#si può citare perchè valuta accuracy su vari modelli di embedding confrontandoo un vocabolario di circa 1000 parole con uno di 10000.
+ Giustifica il fatto di usare un vocabolario più ristretto rispetto ai paper visti prima. Ovviamente si va a perdere accuratezza con un vocabolario più piccolo da ricordare.
+
+
+ 
 
