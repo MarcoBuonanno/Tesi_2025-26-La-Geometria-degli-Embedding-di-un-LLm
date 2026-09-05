@@ -1,4 +1,4 @@
 venv/
 __pycache__/
 .ipynb_checkpoints/
-Eserzio_3/sbert_vocab_100k.pt
+Esercizio_3/sbert_vocab_100k.pt
