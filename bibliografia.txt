@@ -289,12 +289,36 @@ verificano se le distanze rispettano l'ordine previsto dalla gerarchia di WordNe
 }#IMPORTANTISSIMO è un esperimento che fa quasi la stessa cosa che faccio
 FIgure 4 e soprattutto FIgure 9 sono fondamentali: heatmap di shortest_distance e cosine similarity a confronto
 
+
+#K-means
+@article{lloyd1982least,
+  title={Least squares quantization in PCM},
+  author={Lloyd, Stuart},
+  journal={IEEE transactions on information theory},
+  volume={28},
+  number={2},
+  pages={129--137},
+  year={1982},
+  publisher={IEEE}
+}#citazione storica per k-means insieme a: 
+@inproceedings{mcqueen1967some,
+  title={Some methods of classification and analysis of multivariate observations},
+  author={McQueen, James B},
+  booktitle={Proc. of 5th berkeley symposium on math. stat. and prob.},
+  pages={281--297},
+  year={1967}
+}
+
+
+libreria: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+
+
 @inproceedings{zhai2016intrinsic,
   title={Intrinsic and Extrinsic Evaluations of Word Embeddings.},
   author={Zhai, Michael and Tan, Johnny and Choi, Jinho D}
 }
 #fanno clustering di embedding con k-means e lo confrontano con una struttura semantica predefinita di WordNet, esattamente quello che faccio
-
+#scelgono k-means in base a purity, noi lo facciamo in base ad Ari ma metodologia è ugualmente applicabile
 
 @inproceedings{poostchi2018cluster,
   title={Cluster Labeling by Word Embeddings and WordNet's Hypernymy},
@@ -306,6 +330,72 @@ FIgure 4 e soprattutto FIgure 9 sono fondamentali: heatmap di shortest_distance 
 in un certo senso stanno confrontando cluster con legami semantici di WordNet
 #da capire se va bene come citazione
 
+
+#GIUSTIFICAZIONI PER ARI
+@article{warrens2022understanding,
+  title={Understanding the adjusted rand index and other partition comparison indices based on counting object pairs},
+  author={Warrens, Matthijs J and Van Der Hoef, Hanneke},
+  journal={Journal of Classification},
+  volume={39},
+  number={3},
+  pages={487--509},
+  year={2022},
+  publisher={Springer}
+}#carrelata di indici per confronto di ripartizioni, questo molto comune (pag488, ossia la seconda)
+
+@article{rand1971objective,
+  title={Objective criteria for the evaluation of clustering methods},
+  author={Rand, William M},
+  journal={Journal of the American Statistical association},
+  volume={66},
+  number={336},
+  pages={846--850},
+  year={1971},
+  publisher={Taylor \& Francis}
+}#fonte storica RI
+
+@article{hubert1985comparing,
+  title={Comparing partitions},
+  author={Hubert, Lawrence and Arabie, Phipps},
+  journal={Journal of classification},
+  volume={2},
+  number={1},
+  pages={193--218},
+  year={1985},
+  publisher={Springer}
+}#fonte storica di ARI
+
+#METODO GERARCHICO
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html #libreria linkage
+
+@article{mullner2011modern,
+  title={Modern hierarchical, agglomerative clustering algorithms},
+  author={M{\"u}llner, Daniel},
+  journal={arXiv preprint arXiv:1109.2378},
+  year={2011}
+}#spiega average linkage
+
+@article{lee2019document,
+  title={Document vectorization method using network information of words},
+  author={Lee, Sang Yup},
+  journal={PloS one},
+  volume={14},
+  number={7},
+  pages={e0219389},
+  year={2019},
+  publisher={Public Library of Science San Francisco, CA USA}
+} #usa sia k-means sia agglomerativeclustering con linkage average per clustering di documenti testuali, fa pure dendogramma
+
+@article{cozzolino2022document,
+  title={Document clustering},
+  author={Cozzolino, Irene and Ferraro, Maria Brigida},
+  journal={Wiley Interdisciplinary Reviews: Computational Statistics},
+  volume={14},
+  number={6},
+  pages={e1588},
+  year={2022},
+  publisher={Wiley Online Library}
+}#carrelata di vari metodi di clustering per dati testuali (in questo caso documenti) incluso k-means e gerarchico
 
 
 ESERCIZIO 3
