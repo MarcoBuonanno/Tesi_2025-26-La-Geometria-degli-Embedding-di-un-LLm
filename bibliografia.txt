@@ -28,7 +28,8 @@
   pages={657--670},
   year={2020},
   publisher={Wiley Online Library}
-} #si può usare per giustificare l'uso di WordNet per la costruzione del dataset, qua lo usano come ground truth lessicale per migliorare la relatedness in modelli di embedding
+} #si può usare per giustificare l'uso di WordNet per la costruzione del dataset, 
+qua lo usano come ground truth lessicale per migliorare la relatedness in modelli di embedding
 
 @inproceedings{mrkvsic2016counter,
   title={Counter-fitting word vectors to linguistic constraints},
@@ -55,7 +56,8 @@
   booktitle={Proceedings of the 2013 conference of the north american chapter of the association for computational linguistics: Human language technologies},
   pages={746--751},
   year={2013}
-} #utilissimo, giustifica cosine similarity, fa quello che facciamo noi per static models, dimostra che analogie semantiche classiche possono funzionare per modelli statici
+} #utilissimo, giustifica cosine similarity, fa quello che facciamo noi per static models, 
+dimostra che analogie semantiche classiche possono funzionare per modelli statici
 
 Metodologia creazione dataset sinonimi, contrari, random:
 Estrazione di parole tramite WordNet: filtrate per POS, parole con solo lettere all'interno, con più di 3 lettere e con un significati abbastanza comune
@@ -187,10 +189,12 @@ COMMENTI ESERCIZIO 1
 dalle statistiche descrittive, dai box-plot e dagli istogrammi si evince che sinonimi e contrari hanno cosine similarity differnti da quelle random.
 Inoltre si può osservare che soprattutto i sinonimi sembrano avere una distribuzione quasi omogenea. 
 L'ipotesi di omogeneità è stata smentita dal test di Levine.
-Il test di Shepiro-Wallis non ha smentito la possibilità che le distribuzioni fossero normali, ma osservando i Q-Q plot e gli istogrammi dei sinonimi e contrari si può escludere anche qquesta ipotesi.
+Il test di Shepiro-Wallis non ha smentito la possibilità che le distribuzioni fossero normali, ma osservando i Q-Q plot e gli istogrammi dei sinonimi e contrari
+ si può escludere anche qquesta ipotesi.
 Soprattutto la distribuzione dei sinonimi presenta una lunga coda a destra.
 Gli altri test invece hanno confermato che tutte le distribuzioni sono significativamente diverse tra loro.
-Forse la nota principale però è che il modello non riconosce le parole contrarie come distanti dalle parole base, anzi sembrano quelle con cosine similarity maggiore.
+Forse la nota principale però è che il modello non riconosce le parole contrarie come distanti dalle parole base, 
+anzi sembrano quelle con cosine similarity maggiore.
 
 
                                         
@@ -315,7 +319,10 @@ libreria: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMea
 
 @inproceedings{zhai2016intrinsic,
   title={Intrinsic and Extrinsic Evaluations of Word Embeddings.},
-  author={Zhai, Michael and Tan, Johnny and Choi, Jinho D}
+  author={Zhai, Michael and Tan, Johnny and Choi, Jinho D},
+  booktitle={AAAI},
+  pages={4282--4283},
+  year={2016}
 }
 #fanno clustering di embedding con k-means e lo confrontano con una struttura semantica predefinita di WordNet, esattamente quello che faccio
 #scelgono k-means in base a purity, noi lo facciamo in base ad Ari ma metodologia è ugualmente applicabile
@@ -425,3 +432,101 @@ a seconda del tipo di analogia si avrà un'accuracy diversa.
 
  
 
+
+#ESPERIMENTO 4
+
+https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html %libreria pca
+
+@inproceedings{aggarwal2001surprising,
+  title={On the surprising behavior of distance metrics in high dimensional space},
+  author={Aggarwal, Charu C and Hinneburg, Alexander and Keim, Daniel A},
+  booktitle={International conference on database theory},
+  pages={420--434},
+  year={2001},
+  organization={Springer}
+} %riferimento principale per l'esperimento: mostra dubbi sull'analisi delle distanze (euclidea, manatthan ecc.) in spazi ad alta dimensionalità: soprattuto con k> 2 viene meno il concetto di prossimità
+
+
+@article{hotelling1933analysis,
+  title={Analysis of a complex of statistical variables into principal components.},
+  author={Hotelling, Harold},
+  journal={Journal of educational psychology},
+  volume={24},
+  number={6},
+  pages={417},
+  year={1933},
+  publisher={Warwick \& York}
+} %documentazione ufficiale PCA
+
+@article{van2008visualizing,
+  title={Visualizing data using t-SNE.},
+  author={Van der Maaten, Laurens and Hinton, Geoffrey},
+  journal={Journal of machine learning research},
+  volume={9},
+  number={11},
+  year={2008}
+} %documentazione ufficiale di t-sne
+
+@article{mcinnes2018umap,
+  title={Umap: Uniform manifold approximation and projection for dimension reduction},
+  author={McInnes, Leland and Healy, John and Melville, James},
+  journal={arXiv preprint arXiv:1802.03426},
+  year={2018}
+} %documentazione ufficiale di UMAP
+
+
+
+@article{lee2009quality,
+  title={Quality assessment of dimensionality reduction: Rank-based criteria},
+  author={Lee, John A and Verleysen, Michel},
+  journal={Neurocomputing},
+  volume={72},
+  number={7-9},
+  pages={1431--1443},
+  year={2009},
+  publisher={Elsevier}
+}  %carrelata di metriche per confrontare la preservazioni delle relazioni originali dopo riduzione di dimensionalità
+
+
+
+@inproceedings{venna2001neighborhood,
+  title={Neighborhood preservation in nonlinear projection methods: An experimental study},
+  author={Venna, Jarkko and Kaski, Samuel},
+  booktitle={International conference on artificial neural networks},
+  pages={485--491},
+  year={2001},
+  organization={Springer}
+} %misura di confronto tra riduzioni di dimensionalità e originale basata  non su rho ma su quanto si conservi la vicinanza tra le parole nello spazio (utile soprattutto per confronti UMAp, tsne)
+
+
+
+@inproceedings{raunak2019effective,
+  title={Effective dimensionality reduction for word embeddings},
+  author={Raunak, Vikas and Gupta, Vivek and Metze, Florian},
+  booktitle={Proceedings of the 4th Workshop on Representation Learning for NLP (RepL4NLP-2019)},
+  pages={235--243},
+  year={2019}
+}  % applicazione di PCA in contesto di word embedding statici: usa rho spearman per confrontare originale con PCA
+
+
+
+
+
+Esempi di utilizzo di 2D visualization negli altri esperimenti
+@inproceedings{etcheverry2019unraveling,
+  title={Unraveling antonym’s word vectors through a siamese-like network},
+  author={Etcheverry, Mathias and Wonsever, Dina},
+  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  pages={3297--3307},
+  year={2019}
+} #Figura 2 t-sne sinonimi e contrari
+
+
+
+@inproceedings{zhai2016intrinsic,
+  title={Intrinsic and Extrinsic Evaluations of Word Embeddings.},
+  author={Zhai, Michael and Tan, Johnny and Choi, Jinho D},
+  booktitle={AAAI},
+  pages={4282--4283},
+  year={2016}
+} %Figura 1: t-sne distiznione di clustering per specifiche relazione semantiche (in questo caso i sinonimi)
