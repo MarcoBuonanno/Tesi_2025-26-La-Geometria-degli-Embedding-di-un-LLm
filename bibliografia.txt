@@ -427,7 +427,8 @@ a seconda del tipo di analogia si avrà un'accuracy diversa.
   year={2024},
   publisher={Public Library of Science San Francisco, CA USA}
 }#si può citare perchè valuta accuracy su vari modelli di embedding confrontandoo un vocabolario di circa 1000 parole con uno di 10000.
- Giustifica il fatto di usare un vocabolario più ristretto rispetto ai paper visti prima. Ovviamente si va a perdere accuratezza con un vocabolario più piccolo da ricordare.
+ Giustifica il fatto di usare un vocabolario più ristretto rispetto ai paper visti prima.
+  Ovviamente si va a perdere accuratezza con un vocabolario più piccolo da ricordare.
 
 
  
@@ -444,8 +445,16 @@ https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
   pages={420--434},
   year={2001},
   organization={Springer}
-} %riferimento principale per l'esperimento: mostra dubbi sull'analisi delle distanze (euclidea, manatthan ecc.) in spazi ad alta dimensionalità: soprattuto con k> 2 viene meno il concetto di prossimità
+} %riferimento principale per l'esperimento: mostra dubbi sull'analisi delle distanze (euclidea, manatthan ecc.)
+ in spazi ad alta dimensionalità: soprattuto con k> 2 viene meno il concetto di prossimità
 
+
+@article{peng2023interpreting,
+  title={Interpreting the curse of dimensionality from distance concentration and manifold effect},
+  author={Peng, Dehua and Gui, Zhipeng and Wu, Huayi},
+  journal={arXiv preprint arXiv:2401.00422},
+  year={2023}
+} %estensione di aggarwal per cosine distance
 
 @article{hotelling1933analysis,
   title={Analysis of a complex of statistical variables into principal components.},
@@ -512,7 +521,22 @@ https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
 
 
 
+
+Ethayarajh (2019) --> anisotropia 
+@article{mu2017all,
+  title={All-but-the-top: Simple and effective postprocessing for word representations},
+  author={Mu, Jiaqi and Bhat, Suma and Viswanath, Pramod},
+  journal={arXiv preprint arXiv:1702.01417},
+  year={2017}
+}  %PCA rimuove vettore medio, quindi rimuove la componente comune, quindi rimuove anisotropia, 
+%quindi droppa cosine similarity ma non è detto che droppi info, guarda var spiegata e rho
+
+
+
 Mantel, N. (1967). “The detection of disease clustering and a generalized regression approach”. Cancer Research 27 (2): 209-220. PMID 6018555. test di mantel
+https://scikit.bio/docs/dev/generated/skbio.stats.distance.mantel.html libreria mantel per giustificare numero di permutazioni
+
+
 
 Esempi di utilizzo di 2D visualization negli altri esperimenti
 @inproceedings{etcheverry2019unraveling,
